@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "dememo1": {
+    "demo2": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,14 +17,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/dememo1",
+            "outputPath": "dist/demo2",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/api",
               "src/assets"
             ],
             "styles": [
@@ -69,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "dememo1:build:production"
+              "browserTarget": "demo2:build:production"
             },
             "development": {
-              "browserTarget": "dememo1:build:development"
+              "browserTarget": "demo2:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "dememo1:build"
+            "browserTarget": "demo2:build"
           }
         },
         "test": {
@@ -99,17 +98,9 @@
             ],
             "scripts": []
           }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
-          }
         }
       }
     }
-  }
+  },
+  "defaultProject": "demo2"
 }
