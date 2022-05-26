@@ -9,7 +9,13 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+  sitename = "123";
+  logo = "tim TEST"
+
   ngOnInit(): void {
+    setTimeout(()=>{
+      this.sitename = "345"
+    },2000);
   }
 
 }
