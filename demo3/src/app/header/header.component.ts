@@ -9,21 +9,17 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-  sitename = "123";
-  logo = "tim TEST"
+  keyword = "123";
+  counter = 12;
+  isClick = false
 
   ngOnInit(): void {
-    // setTimeout(()=>{
-    //   this.sitename = "345"
-    // },2000);
   }
 
-  changeTitle(event: MouseEvent){
-    console.log(event)
-    if(event.altKey){
-      this.sitename = "789"
-    }
-
+  doString(event:MouseEvent){
+    this.counter++;
+    this.isClick = !this.isClick
+    this.keyword = "456";
   }
 
 }

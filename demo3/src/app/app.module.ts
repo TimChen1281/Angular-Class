@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { ArticlesComponent } from './articles/articles.component';
+import { TagsComponent } from './tags/tags.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 
@@ -11,14 +12,15 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     HeaderComponent,
+    ArticlesComponent,
+    TagsComponent,
     FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent, HeaderComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
